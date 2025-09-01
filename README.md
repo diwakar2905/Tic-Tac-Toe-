@@ -50,7 +50,8 @@ You can play the game online here:
 **[https://tic-tac-toe-jv7o.onrender.com](https://tic-tac-toe-jv7o.onrender.com)**
 
 ***
-<img width="1919" height="938" alt="image" src="https://github.com/user-attachments/assets/66db5c20-fc9c-4e73-b315-1b1e76b73a08" />
+<img width="1919" height="936" alt="Screenshot 2025-09-02 035938" src="https://github.com/user-attachments/assets/7d588e1a-28ca-4548-8be6-17ac212e1a01" />
+
 
 <img width="1919" height="938" alt="Screenshot 2025-09-02 035955" src="https://github.com/user-attachments/assets/67dce824-e27d-4ea4-9878-ef59eb1c4d8a" />
 
