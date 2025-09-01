@@ -15,7 +15,6 @@ tic-tac-toe-app
 │   │   └── tic_tac_toe.py
 │   └── app.py
 ├── requirements.txt
-├── vercel.json
 └── README.md
 ```
 
@@ -45,6 +44,19 @@ pip install -r requirements.txt
 2. Open `http://127.0.0.1:5000` in a web browser to access the game interface.
 3. Follow the on-screen instructions to play the game.
 
+## Live Demo
+
+You can play the game online here:  
+**[https://tic-tac-toe-jv7o.onrender.com](https://tic-tac-toe-jv7o.onrender.com)**
+
+***
+<img width="1919" height="938" alt="image" src="https://github.com/user-attachments/assets/66db5c20-fc9c-4e73-b315-1b1e76b73a08" />
+
+<img width="1919" height="938" alt="Screenshot 2025-09-02 035955" src="https://github.com/user-attachments/assets/67dce824-e27d-4ea4-9878-ef59eb1c4d8a" />
+
+
+***
+
 ## Deploying to Render
 
 This project can be easily deployed to [Render](https://render.com).
@@ -55,8 +67,8 @@ This project can be easily deployed to [Render](https://render.com).
     - Click "New" > "Web Service".
     - Connect your GitHub repository.
     - For the build and run commands, use:
-        - **Build Command:** `pip install -r requirements.txt`
-        - **Start Command:** `python src/app.py`
+        - **Build Command:** `pip install -r ../requirements.txt` (if your root directory is `src`)
+        - **Start Command:** `gunicorn app:app`
     - Set the **Environment** to Python 3.x.
     - Optionally, set `PORT` environment variable to `5000` if needed.
 3. **Deploy:** Click "Create Web Service" and Render will build and deploy your Flask app.
@@ -70,4 +82,4 @@ If you want to host the frontend separately (e.g., on Vercel or Netlify), update
 Feel free to contribute to this project by submitting issues or pull requests. Your feedback and suggestions are welcome!
 
 ## License
-This project is open-source and available under the MIT License.
+This project is open-
