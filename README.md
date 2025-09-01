@@ -1,34 +1,64 @@
-OBJECTIVE:
+# Tic Tac Toe Game
 
-This project aims to develop a Tic Tac Toe game using python. It mainly consists of developing and implementing a computer program that plays Tic Tac Toe against another player.
-In order to understand what Tic Tac Toe game is and how to play the game, below is the description.
+## Overview
+This project is a web-based Tic Tac Toe game that allows two players to compete against each other. The game consists of a backend written in Python and a frontend built with HTML, CSS, and JavaScript.
 
-GAME DESCRIPTION:
+## Project Structure
+```
+tic-tac-toe-app
+├── public
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+├── src
+│   ├── backend
+│   │   └── tic_tac_toe.py
+│   └── app.py
+├── requirements.txt
+├── vercel.json
+└── README.md
+```
 
-Tic Tac Toe is a two-player game (one of them being played by computer or human). In this game, there is a board with 3 x 3 squares.
+## Backend
+The backend logic is implemented in `src/backend/tic_tac_toe.py` and `src/app.py`. It includes:
+- Game initialization
+- Player symbol selection
+- Game state management
+- Winner determination
+- A Flask server to handle game logic and serve the frontend.
 
-The two players take turns putting marks on a 3x3 board. The goal of Tic Tac Toe game is to be one of the players to get three same symbols in a row - horizontally, vertically or diagonally on a 3 x 3 grid. The player who first gets 3 of his/her symbols (marks) in a row - vertically, horizontally, or diagonally wins the game, and the other loses the game. The game can be played by two players. There are two options for players: (a) Human (b) Computer
+## Frontend
+The frontend consists of:
+- `public/index.html`: The main HTML file that sets up the game board and user interface.
+- `public/style.css`: Styles for the game interface, including layout and design.
+- `public/app.js`: JavaScript code that handles user interactions and updates the game state.
 
+## Requirements
+To run the backend, you need to install the required Python packages listed in `requirements.txt`. You can install them using pip:
 
-GAME RULES:
+```
+pip install -r requirements.txt
+```
 
-* A player can choose between two symbols with his opponent, usual game uses “X” and “O”.
+## Running the Game Locally
+1. Start the backend server by running the `app.py` file.
+2. Open `http://127.0.0.1:5000` in a web browser to access the game interface.
+3. Follow the on-screen instructions to play the game.
 
-* The player that gets to play first will get the "X" mark (we call him/her player 1) and the player that gets to play second will get the "O" mark (we call him/her player 2).
+## Deploying to Vercel
+This project is configured for easy deployment to Vercel.
 
-* Player 1 and 2 take turns making moves with Player 1 playing mark “X” and Player 2 playing mark “O”.
+1.  **Push to GitHub:** Create a GitHub repository and push your code.
+2.  **Connect to Vercel:**
+    *   Go to your Vercel dashboard.
+    *   Click on "New Project".
+    *   Select your Git provider (GitHub).
+    *   Choose your repository.
+    *   Vercel will automatically detect the `vercel.json` file and configure the project.
+    *   Click "Deploy".
 
-* A player marks any of the 3x3 squares with his mark (“X” or “O”) and their aim is to create a straight line horizontally, vertically or diagonally with two intensions:
-  a. One of the players gets three of his/her marks in a row (vertically, horizontally, or diagonally) i.e. that player wins the game.
-  b. If no one can create a straight line with their own mark and all the positions on the board are occupied, then the game ends in a draw/tie.
+## Contributing
+Feel free to contribute to this project by submitting issues or pull requests. Your feedback and suggestions are welcome!
 
-
-CODE IMPLEMENTATION
-
-* In order to run this code, pygame library needs to be installed. To install this, open command prompt and type "pip install pygame".
-
-* Run the complete code TicTacToeGame.ipynb.
-
-* The game contains two buttons - vs Human and vs AI, so that we can choose our opponent. Once we click button, start playing game by clicking on the game board. Since we play first,    we will be defined as Player X.
-
-* Once the game is finished, the message will be displayed on the game screen with either the winner name (X or O) or Draw game.
+## License
+This project is open-source and available under the MIT License.
