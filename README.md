@@ -45,17 +45,26 @@ pip install -r requirements.txt
 2. Open `http://127.0.0.1:5000` in a web browser to access the game interface.
 3. Follow the on-screen instructions to play the game.
 
-## Deploying to Vercel
-This project is configured for easy deployment to Vercel.
+## Deploying to Render
 
-1.  **Push to GitHub:** Create a GitHub repository and push your code.
-2.  **Connect to Vercel:**
-    *   Go to your Vercel dashboard.
-    *   Click on "New Project".
-    *   Select your Git provider (GitHub).
-    *   Choose your repository.
-    *   Vercel will automatically detect the `vercel.json` file and configure the project.
-    *   Click "Deploy".
+This project can be easily deployed to [Render](https://render.com).
+
+1. **Push to GitHub:** Create a GitHub repository and push your code.
+2. **Create a New Web Service on Render:**
+    - Go to your Render dashboard.
+    - Click "New" > "Web Service".
+    - Connect your GitHub repository.
+    - For the build and run commands, use:
+        - **Build Command:** `pip install -r requirements.txt`
+        - **Start Command:** `python src/app.py`
+    - Set the **Environment** to Python 3.x.
+    - Optionally, set `PORT` environment variable to `5000` if needed.
+3. **Deploy:** Click "Create Web Service" and Render will build and deploy your Flask app.
+4. **Access:** Once deployed, you’ll get a public URL to access your Tic Tac Toe game.
+
+**Note:**  
+If your frontend is in the `public` folder and served by Flask, no extra configuration is needed.  
+If you want to host the frontend separately (e.g., on Vercel or Netlify), update your frontend code to call the Render backend URL.
 
 ## Contributing
 Feel free to contribute to this project by submitting issues or pull requests. Your feedback and suggestions are welcome!
