@@ -1,0 +1,119 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Hide confetti overflow */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #e04050;
+    transform: scale(1.05);
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Celebration Animation */
+#celebration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.celebration-text {
+    font-size: 5em;
+    color: white;
+    text-shadow: 0 0 20px #ff4757;
+    animation: celebration-text-animation 1s ease-in-out;
+}
+
+@keyframes celebration-text-animation {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+.show-celebration #celebration {
+    display: flex;
+}
+
+/* Confetti */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff4757;
+    opacity: 0.7;
+    animation: confetti-fall 5s linear infinite;
+}
+
+@keyframes confetti-fall {
+    0% { transform: translateY(-100vh) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(720deg); }
+}
