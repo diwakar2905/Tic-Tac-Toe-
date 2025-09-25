@@ -1,4 +1,3 @@
-# Tic Tac Toe Game
 
 ## Overview
 This project is a web-based Tic Tac Toe game that allows two players to compete against each other. The game consists of a backend written in Python and a frontend built with HTML, CSS, and JavaScript.
